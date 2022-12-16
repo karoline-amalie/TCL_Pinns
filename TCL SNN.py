@@ -36,8 +36,9 @@ Dt = res/3600        # time step of the model in secs
 
 # note 900 s is 15 min - 300 s is 5 min 
  
-# temperature parameters  
-read_data = pd.read_csv(r'C:\Users\karre\OneDrive - Danmarks Tekniske Universitet\Dokumenter\Python Scripts\TCL\csv (1).csv', delimiter=';')
+# temperature parameters
+read_data = pd.read_csv('cvs(1).csv',delimiter=';')  
+
 Ambient = read_data['Middeltemperatur'].values
 Ambient_resampled = np.repeat(Ambient, 1/Dt)
 delta = 1   # temperature dead band
